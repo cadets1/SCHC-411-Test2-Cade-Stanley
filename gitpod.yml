@@ -1,0 +1,7 @@
+image: leanprovercommunity/mathlib:gitpod
+
+vscode:
+  extensions:
+    - leanprover.lean4
+tasks:
+  - init: curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh -s -- --default-toolchain none --no-modify-path -y && . /home/gitpod/.profile && lake update && lake exe cache get && lake build
